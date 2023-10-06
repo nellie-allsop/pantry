@@ -21,3 +21,6 @@
 - Clearly defined API endpoints with sample responses:
 
 - Clearly defined database schemas:
+
+- References:
+  - https://meyerweb.com/eric/tools/css/reset/
