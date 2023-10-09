@@ -28,9 +28,24 @@
 				</p>
 			</article>
 			<button>Find a recipe</button>
-			// use chartJS
+			<!-- use chartJS -->
 			<section>Chart</section>
-			<div>Form</div>
+			<form id="ingredientsForm">
+				<fieldset>
+					<legend>Add your ingredients</legend>
+
+					<label for="ingredientName">Ingredient name</label>
+
+					<input
+						type="text"
+						placeholder="Type your ingredient"
+						id="ingredientName"
+						name="ingredientName"
+					/>
+
+					<input type="submit" value="Submit" id="formButton" />
+				</fieldset>
+			</form>
 		</main>
 		<footer>
 			<p>&copy; PantryPet Ltd. All rights reserved.</p>
