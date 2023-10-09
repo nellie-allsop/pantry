@@ -1,0 +1,26 @@
+body {
+	margin: 2rem;
+}
+
+header {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+button {
+	cursor: pointer;
+	margin: 10px;
+}
+
+legend {
+	margin: 10px;
+	font-weight: bold;
+}
+
+#formButton {
+	cursor: pointer;
+}
+
+h2 {
+	font-weight: bold;
+}
