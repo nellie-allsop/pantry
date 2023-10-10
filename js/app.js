@@ -14,13 +14,12 @@ function populateList() {
 	if (localStorage.getItem("ingredients")) {
 		pantryList = JSON.parse(localStorage.getItem("ingredients"));
 
-		// for (let i = 0; i < pantryList.length; i++) {
-		const li = document.createElement("li");
-		li.textContent = JSON.parse(localStorage.getItem("ingredients"));
-		yourPantry.appendChild(li);
+		for (let i = 0; i < pantryList.length; i++) {
+			const li = document.createElement("li");
+			li.textContent = pantryList[i];
+			yourPantry.appendChild(li);
+		}
 	}
-
-	// }
 }
 
 populateList();
