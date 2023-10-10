@@ -60,42 +60,8 @@ const recipeCards = [
     "./images/Bacon Cheeseburger.jpg"
   ),
 ];
-// populateRecipeCards();
-// // Function to populate the recipe cards from the object
-// function populateRecipeCards() {
-//   const recipeList = document.getElementById("recipeList");
 
-//   recipeCards.forEach((recipe) => {
-//     const recipeDiv = document.createElement("div");
-//     recipeDiv.classList.add("recipe");
-
-//     // Display the recipe image, name and list
-//     const image = document.createElement("img");
-//     image.src = recipe.imageUrl;
-//     image.alt = recipe.name;
-//     recipeDiv.appendChild(image);
-
-//     const recipeName = document.createElement("h3");
-//     recipeName.textContent = recipe.name;
-//     recipeDiv.appendChild(recipeName);
-
-//     const ingredientsList = document.createElement("ul");
-//     recipe.items.forEach((item) => {
-//       // check if item is in Array of localstorage
-//       // if (recipe.items === pantryList) {
-//       const listItem = document.createElement("li");
-//       listItem.textContent = item;
-//       ingredientsList.appendChild(listItem);
-//     });
-//     recipeDiv.appendChild(ingredientsList);
-
-//     recipeList.appendChild(recipeDiv);
-//   });
-// }
-// populateRecipeCards();
-// store the items in local storage
-
-// Your existing Recipe and recipeCards array definitions...
+const pantryItems = JSON.parse(localStorage.getItem("pantryItems")) || [];
 
 function populateRecipeCards() {
   const recipeList = document.getElementById("recipeList");
@@ -127,6 +93,12 @@ function populateRecipeCards() {
     recipe.items.forEach((item) => {
       const listItem = document.createElement("li");
       listItem.textContent = item;
+
+      // Check if the item is in the pantry
+      if (!pantryItems.includes(item)) {
+        listItem.style.textDecoration = "line-through"; // Add color or another way of doing through text maybe a stretch goal MVP this is enough for now?
+      }
+
       ingredientsList.appendChild(listItem);
     });
 
