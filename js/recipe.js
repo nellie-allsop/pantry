@@ -60,39 +60,87 @@ const recipeCards = [
     "./images/Bacon Cheeseburger.jpg"
   ),
 ];
-populateRecipeCards();
-// Function to populate the recipe cards from the object
+// populateRecipeCards();
+// // Function to populate the recipe cards from the object
+// function populateRecipeCards() {
+//   const recipeList = document.getElementById("recipeList");
+
+//   recipeCards.forEach((recipe) => {
+//     const recipeDiv = document.createElement("div");
+//     recipeDiv.classList.add("recipe");
+
+//     // Display the recipe image, name and list
+//     const image = document.createElement("img");
+//     image.src = recipe.imageUrl;
+//     image.alt = recipe.name;
+//     recipeDiv.appendChild(image);
+
+//     const recipeName = document.createElement("h3");
+//     recipeName.textContent = recipe.name;
+//     recipeDiv.appendChild(recipeName);
+
+//     const ingredientsList = document.createElement("ul");
+//     recipe.items.forEach((item) => {
+//       // check if item is in Array of localstorage
+//       // if (recipe.items === pantryList) {
+//       const listItem = document.createElement("li");
+//       listItem.textContent = item;
+//       ingredientsList.appendChild(listItem);
+//     });
+//     recipeDiv.appendChild(ingredientsList);
+
+//     recipeList.appendChild(recipeDiv);
+//   });
+// }
+// populateRecipeCards();
+// store the items in local storage
+
+// Your existing Recipe and recipeCards array definitions...
+
 function populateRecipeCards() {
   const recipeList = document.getElementById("recipeList");
 
   recipeCards.forEach((recipe) => {
-    const recipeDiv = document.createElement("div");
-    recipeDiv.classList.add("recipe");
+    const recipeCard = document.createElement("div");
+    recipeCard.classList.add("recipe-card");
 
-    // Display the recipe image, name and list
+    const recipeCardInner = document.createElement("div");
+    recipeCardInner.classList.add("recipe-card-inner");
+
+    const recipeCardFront = document.createElement("div");
+    recipeCardFront.classList.add("recipe-card-front");
+
     const image = document.createElement("img");
     image.src = recipe.imageUrl;
     image.alt = recipe.name;
-    recipeDiv.appendChild(image);
 
     const recipeName = document.createElement("h3");
     recipeName.textContent = recipe.name;
-    recipeDiv.appendChild(recipeName);
+
+    recipeCardFront.appendChild(image);
+    recipeCardFront.appendChild(recipeName);
+
+    const recipeCardBack = document.createElement("div");
+    recipeCardBack.classList.add("recipe-card-back");
 
     const ingredientsList = document.createElement("ul");
     recipe.items.forEach((item) => {
-      // check if item is in Array of localstorage
-      // if (recipe.items === pantryList) {
       const listItem = document.createElement("li");
       listItem.textContent = item;
       ingredientsList.appendChild(listItem);
     });
-    recipeDiv.appendChild(ingredientsList);
 
-    recipeList.appendChild(recipeDiv);
+    recipeCardBack.appendChild(ingredientsList);
+
+    recipeCardInner.appendChild(recipeCardFront);
+    recipeCardInner.appendChild(recipeCardBack);
+
+    recipeCard.appendChild(recipeCardInner);
+
+    recipeList.appendChild(recipeCard);
   });
 }
+
 populateRecipeCards();
-// store the items in local storage
 
 localStorage.setItem("recipes", JSON.stringify(recipeCards));

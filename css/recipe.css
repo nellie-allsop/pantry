@@ -1,0 +1,37 @@
+/* Recipe Card Container */
+.recipe-card {
+  perspective: 1000px; /* Add perspective to create the 3D effect */
+}
+
+/* Recipe Card Inner Container */
+.recipe-card-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d; /* Ensure the children maintain 3D positioning */
+  transition: transform 0.5s; /* Add a smooth transition effect */
+}
+
+/* Front Side of the Card */
+.recipe-card-front,
+.recipe-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden; /* Hide the back face */
+}
+
+.recipe-card-front {
+  /* Front styles (image and name) */
+  transform: rotateY(0deg); /* Initially, it's not rotated */
+}
+
+/* Back Side of the Card (Initially hidden) */
+.recipe-card-back {
+  /* Back styles (ingredients) */
+  transform: rotateY(180deg); /* Rotate to hide initially */
+}
+
+/* Hover Effect: Flip the Card */
+.recipe-card:hover .recipe-card-inner {
+  transform: rotateY(180deg); /* Flip the card on hover */
+}
