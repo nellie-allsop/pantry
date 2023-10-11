@@ -96,7 +96,7 @@ function populateRecipeCards() {
 
       // Check if the item is in the pantry
       if (!pantryItems.includes(item)) {
-        listItem.style.textDecoration = "line-through"; // Add color or another way of doing through text maybe a stretch goal MVP this is enough for now?
+        listItem.style.color = "#540B0B"; // Add color or another way of doing through text maybe a stretch goal MVP this is enough for now?
       }
 
       ingredientsList.appendChild(listItem);

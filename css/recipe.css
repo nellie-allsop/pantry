@@ -62,7 +62,7 @@ a {
 .recipe-card-back {
   transform: rotateY(180deg);
   color: white;
-  background-color: #9e2a2b; /* colors to be changed to match pallete we choose */
+  background-color: #e09f3e; /* colors to be changed to match pallete we choose */
 }
 
 .recipe-card:hover .recipe-card-inner {
