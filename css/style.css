@@ -1,3 +1,11 @@
+
+section,
+form,
+article {
+	border: 1px black solid;
+	border-radius: 20px;
+}
+
 body {
   margin: 2rem;
 }
@@ -7,6 +15,8 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+
+
 
 h1 {
   font-size: 2rem;
@@ -23,6 +33,7 @@ a {
   font-size: 1.5rem;
   text-decoration: none;
 }
+
 
 legend {
   margin: 10px;
@@ -43,4 +54,42 @@ footer {
   margin: 2rem;
   justify-content: center;
   font-size: 1rem;
+}
+
+article {
+	padding: 3rem;
+}
+
+/* section {
+}
+
+#ingredientsForm {
+} */
+
+li {
+	list-style-type: circle;
+}
+
+main {
+	display: grid;
+	grid-template-rows: 300px 1fr;
+	grid-template-columns: 1fr 1fr;
+}
+
+article {
+	grid-row-start: 1;
+	grid-row-end: 2;
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+form {
+	grid-row-start: 2;
+	grid-row-end: 3;
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+
+legend {
+	border: 2rem;
 }
