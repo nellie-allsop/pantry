@@ -61,7 +61,7 @@ const recipeCards = [
   ),
 ];
 
-const pantryItems = JSON.parse(localStorage.getItem("pantryItems")) || [];
+const pantryItems = JSON.parse(localStorage.getItem("ingredients")) || [];
 
 function populateRecipeCards() {
   const recipeList = document.getElementById("recipeList");
