@@ -7,15 +7,11 @@ CHOCOLATE COSMOS #540B0B */
 /* handwriting --> Caveat medium
 general page --> Quicksand medium*/
 
-section,
-form,
-article {
-  border: 1px black solid;
-  border-radius: 20px;
-}
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Quicksand:wght@500&display=swap");
 
 body {
-  margin: 2rem;
+  font-family: "Quicksand", sans-serif;
+  width: 100%;
 }
 
 header {
@@ -24,10 +20,9 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-main {
-  background-color: #fff3b0;
-}
+
 h1 {
+  color: white;
   font-size: 2rem;
   padding: 2rem;
 }
@@ -38,61 +33,48 @@ nav {
   justify-content: space-around;
 }
 button {
+  border-radius: 10px;
   background-color: #e09f3e;
+  font-family: "Quicksand", sans-serif;
 }
 a {
   font-size: 1.5rem;
   text-decoration: none;
 }
 
-legend {
-  margin: 10px;
-  font-weight: bold;
-}
-
-#formButton {
-  cursor: pointer;
-}
-
-h2 {
-  font-weight: bold;
-}
-
-footer {
-  background-color: #335c67;
-
-  display: flex;
-  width: 100%;
-  padding: 2rem;
-  justify-content: center;
-  font-size: 1rem;
-}
-
-article {
-  padding: 3rem;
-}
-
-/* section {
-}
-
-#ingredientsForm {
-} */
-
-li {
-  list-style-type: circle;
-}
-
 main {
+  background-color: #fff3b0;
+  padding: 4.5rem;
   display: grid;
-  grid-template-rows: 100px 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
 }
-
 article {
   grid-row-start: 1;
   grid-row-end: 2;
   grid-column-start: 1;
   grid-column-end: 3;
+}
+
+section {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+#yourPantry {
+  font-family: "Caveat", cursive;
+}
+
+li {
+  font-size: 1rem;
+  list-style-image: url("./check.png");
 }
 
 div:first-child {
@@ -102,12 +84,31 @@ div:first-child {
   grid-column-end: 2;
 }
 div:last-child {
-  grid-row-start: 3;
-  grid-row-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
   grid-column-start: 1;
   grid-column-end: 2;
 }
 
+form {
+  padding: 1rem;
+}
+
 legend {
   border: 2rem;
+  margin: 10px;
+  font-weight: bold;
+}
+
+#formButton {
+  cursor: pointer;
+}
+
+footer {
+  background-color: #335c67;
+  display: flex;
+  width: 100%;
+  padding: 2rem;
+  justify-content: center;
+  font-size: 1rem;
 }
