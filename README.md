@@ -37,6 +37,10 @@ Our project solves those problems by:
 
 The user will need to follow our git hub pages link (see top of file) and then follow the instructions on our site
 
+## Lighthouse report
+
+![Lighthouse report](./images/lighthouse.png)
+
 ## References:
 
 - [CSS Tools: Reset CSS] https://meyerweb.com/eric/tools/css/reset/
@@ -45,4 +49,6 @@ The user will need to follow our git hub pages link (see top of file) and then f
 
 - For our recipe images, we were not able to provide references but this is an area we could improve on in our next project.
 
-- [Favicon] (https://www.flaticon.com/free-icon/cat-face_5702253)
+- [Favicon and logo image] (https://www.flaticon.com/free-icons/cat-face)
+  Title: Cat face icons
+  Created by: Rakib Hassan Rahim
