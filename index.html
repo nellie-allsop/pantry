@@ -1,108 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/app.js" defer></script>
-    <title>PantryPet</title>
-  </head>
-  <body>
-    <header>
-      <h1>PantryPet</h1>
-      <nav>
-        <button><a href="./index.html">Home</a></button>
-        <button><a href="./about.html">About us</a></button>
-        <button><a href="./recipe.html">Recipe album</a></button>
-      </nav>
-      <img id="logoImage" src="https://placehold.co/150" alt="logo" />
-    </header>
-    <main>
-      <article>
-        <h2>Description</h2>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia
-          autem aliquid optio? Id, aspernatur. Recusandae eum non, eveniet
-          labore accusantium corrupti quasi, iste fuga iure assumenda asperiores
-          fugit esse obcaecati?
-        </p>
-      </article>
-      <!-- use chartJS -->
-      <section>
-        <h2>Your Pantry</h2>
-        <ul id="yourPantry"></ul>
-      </section>
-      <div>
-        <form id="recipeForm">
-          <fieldset>
-            <legend>Choose from our suggested ingredients</legend>
-            <label for="recipeIngredients">Recipe Ingredients</label>
-            <select name="recipeIngredients" id="recipeIngredients">
-              <option value="" selected>Choose an ingredient</option>
-              <option value="avocado">avocado</option>
-              <option value="bacon">bacon</option>
-              <option value="beef strips">beef strips</option>
-              <option value="black beans">black beans</option>
-              <option value="broccoli">broccoli</option>
-              <option value="burgers">burgers</option>
-              <option value="cheddar cheese">cheddar cheese</option>
-              <option value="cherry tomatoes">cherry tomatoes</option>
-              <option value="chicken breast">chicken breast</option>
-              <option value="feta cheese">feta cheese</option>
-              <option value="garlic">garlic</option>
-              <option value="lettuce">lettuce</option>
-              <option value="mozarella cheese">mozarella cheese</option>
-              <option value="mushrooms">mushrooms</option>
-              <option value="olive oil">olive oil</option>
-              <option value="parmesan cheese">parmesan cheese</option>
-              <option value="pasta">pasta</option>
-              <option value="pine nuts">pine nuts</option>
-              <option value="peppers">peppers</option>
-              <option value="pesto sauce">pesto sauce</option>
-              <option value="red onion">red onion</option>
-              <option value="rice">rice</option>
-              <option value="salmon fillets">salmon fillets</option>
-              <option value="salsa">salsa</option>
-              <option value="sesame seeds">sesame seeds</option>
-              <option value="sour cream">sour cream</option>
-              <option value="spinach">spinach</option>
-              <option value="teriyaki sauce">teriyaki sauce</option>
-              <option value="tortillas">tortillas</option>
-            </select>
-            <input type="submit" value="Submit" id="recipeButton" />
-          </fieldset>
-        </form>
-        <form id="ingredientsForm">
-          <fieldset>
-            <legend>Add your ingredients</legend>
-            <label for="ingredientName">Ingredient name</label>
-            <input
-              type="text"
-              placeholder="Type your ingredient"
-              id="ingredientName"
-              name="ingredientName"
-            />
-            <input type="submit" value="Submit" id="formButton" />
-          </fieldset>
-        </form>
-        <form id="removeIngredient">
-          <fieldset>
-            <legend>Remove an Ingredient</legend>
-            <label for="removedIngredient">Ingredient name</label>
-            <input
-              type="text"
-              placeholder="Type your ingredient"
-              id="removedIngredient"
-              name="removedIngredient"
-            />
-            <input type="submit" value="Submit" id="removeButton" />
-          </fieldset>
-        </form>
-      </div>
-    </main>
-    <footer>
-      <p>&copy; PantryPet Ltd. All rights reserved.</p>
-    </footer>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/reset.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<script src="./js/app.js" defer></script>
+		<title>PantryPet</title>
+	</head>
+	<body>
+		<header>
+			<h1>PantryPet</h1>
+			<nav>
+				<button><a href="./index.html">Home</a></button>
+				<button><a href="./about.html">About us</a></button>
+				<button><a href="./recipe.html">Recipe album</a></button>
+			</nav>
+			      <img id="logoImage" src="https://placekitten.com/150/150" alt="logo" />
+
+		</header>
+		<main>
+			<article>
+				<p>
+					Have you ever struggled to remember what's in your pantry? Maybe
+					you've stared into your fridge, the light bathing your frustrated face
+					in a warm glow, as you ask yourself, "Why oh why can't I think of
+					anything to cook?" Well fear not, because we have your solution.
+					Introducing PantryPet, your friendly food companion. To start, add
+					some ingredients to your virtual pantry. You can do this one of two
+					ways:
+				</p>
+				<ul>
+					<li>Select from a list of suggested recipe ingredients</li>
+					<li>Add specific ingredients of your choosing</li>
+				</ul>
+				<p>
+					These ingredients will then be stored on the site, so you can take
+					your PantryPet with you on the go and never forget what's at home
+					*cough* growing mould *cough*. To remove an ingredient, simply type
+					its name into the Remove an ingredient section and hit submit.
+				</p>
+				<p>
+					Now, what recipes might you be able to make using these ingredients?
+					Try clicking Recipe Album and see what happens...
+				</p>
+			</article>
+			<section>
+				<h2>Your Pantry</h2>
+				<ul id="yourPantry"></ul>
+			</section>
+			<div>
+				<form id="recipeForm">
+					<fieldset>
+						<legend>Choose from our suggested ingredients</legend>
+						<label for="recipeIngredients">Recipe Ingredients</label>
+						<select name="recipeIngredients" id="recipeIngredients">
+							<option value="" selected>Choose an ingredient</option>
+							<option value="avocado">avocado</option>
+							<option value="bacon">bacon</option>
+							<option value="beef strips">beef strips</option>
+							<option value="black beans">black beans</option>
+							<option value="broccoli">broccoli</option>
+							<option value="burgers">burgers</option>
+							<option value="cheddar cheese">cheddar cheese</option>
+							<option value="cherry tomatoes">cherry tomatoes</option>
+							<option value="chicken breast">chicken breast</option>
+							<option value="feta cheese">feta cheese</option>
+							<option value="garlic">garlic</option>
+							<option value="lettuce">lettuce</option>
+							<option value="mozarella cheese">mozarella cheese</option>
+							<option value="mushrooms">mushrooms</option>
+							<option value="olive oil">olive oil</option>
+							<option value="parmesan cheese">parmesan cheese</option>
+							<option value="pasta">pasta</option>
+							<option value="pine nuts">pine nuts</option>
+							<option value="peppers">peppers</option>
+							<option value="pesto sauce">pesto sauce</option>
+							<option value="red onion">red onion</option>
+							<option value="rice">rice</option>
+							<option value="salmon fillets">salmon fillets</option>
+							<option value="salsa">salsa</option>
+							<option value="sesame seeds">sesame seeds</option>
+							<option value="sour cream">sour cream</option>
+							<option value="spinach">spinach</option>
+							<option value="teriyaki sauce">teriyaki sauce</option>
+							<option value="tortillas">tortillas</option>
+						</select>
+						<input type="submit" value="Submit" id="recipeButton" />
+					</fieldset>
+				</form>
+				<form id="ingredientsForm">
+					<fieldset>
+						<legend>Add your ingredients</legend>
+						<label for="ingredientName">Ingredient name</label>
+						<input
+							type="text"
+							placeholder="Type your ingredient"
+							id="ingredientName"
+							name="ingredientName"
+						/>
+						<input type="submit" value="Submit" id="formButton" />
+					</fieldset>
+				</form>
+				<form id="removeIngredient">
+					<fieldset>
+						<legend>Remove an Ingredient</legend>
+						<label for="removedIngredient">Ingredient name</label>
+						<input
+							type="text"
+							placeholder="Type your ingredient"
+							id="removedIngredient"
+							name="removedIngredient"
+						/>
+						<input type="submit" value="Submit" id="removeButton" />
+					</fieldset>
+				</form>
+			</div>
+		</main>
+		<footer>
+			<p>&copy; PantryPet Ltd. All rights reserved.</p>
+		</footer>
+	</body>
+
 </html>
