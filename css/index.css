@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+main {
+  background-color: #fff3b0;
+  padding: 4.5rem;
+  display: grid;
+  grid-template-rows: 15rem 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+article {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+p {
+  padding: 10px;
+}
+section {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  padding: 15px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+#yourPantry {
+  font-family: "Caveat", cursive;
+  padding: 10px;
+  overflow-y: scroll;
+}
+
+#yourPantry li {
+  font-size: 1.5rem;
+  list-style-image: url("./check.png");
+}
+
+div:first-child {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+div:last-child {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+form {
+  padding: 1rem;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+}
+
+label {
+  padding: 10px;
+}
+#formButton {
+  cursor: pointer;
+}
