@@ -29,83 +29,24 @@ h1 {
 nav {
   width: 50%;
   display: flex;
-  justify-content: flex-start;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 button {
   border-radius: 10px;
   background-color: #e09f3e;
   font-family: "Quicksand", sans-serif;
 }
+button:hover {
+  background-color: #fff3b0;
+}
 a {
   font-size: 1.5rem;
   text-decoration: none;
 }
 
-main {
-  background-color: #fff3b0;
-  padding: 4.5rem;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-}
-article {
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-section {
-  grid-row-start: 2;
-  grid-row-end: 3;
-  grid-column-start: 2;
-  grid-column-end: 3;
-}
-
-h2 {
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-#yourPantry {
-  font-family: "Caveat", cursive;
-}
-
-li {
-  font-size: 1rem;
-  list-style-image: url("./check.png");
-}
-
-div:first-child {
-  grid-row-start: 2;
-  grid-row-end: 3;
-  grid-column-start: 1;
-  grid-column-end: 2;
-}
-div:last-child {
-  grid-row-start: 2;
-  grid-row-end: 3;
-  grid-column-start: 1;
-  grid-column-end: 2;
-}
-
-form {
-  padding: 1rem;
-}
-
-legend {
-  border: 2rem;
-  margin: 10px;
-  font-weight: bold;
-}
-
-#formButton {
-  cursor: pointer;
-}
-
 footer {
   background-color: #335c67;
+  color: white;
   display: flex;
   width: 100%;
   padding: 2rem;
