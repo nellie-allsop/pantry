@@ -2,16 +2,37 @@ main {
   background-color: #fff3b0;
 }
 
+main.h1 {
+  color: black;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+article {
+  margin-left: 175px;
+}
+
+h4 {
+  font-weight: bold;
+}
+
+p {
+  font-weight: 100;
+}
+
 #recipeList {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-left: 175px;
   padding-bottom: 30px;
+  padding-top: 20px;
   background-color: #fff3b0;
 }
 
-/* Recipe Card Container */
 .recipe-card {
   perspective: 500px;
   width: 250px;
@@ -29,7 +50,7 @@ main {
   width: 250px;
   height: 250px;
   transform-style: preserve-3d;
-  transition: transform 0.5s; /* We can play around with this */
+  transition: transform 0.75s;
   border-radius: 10px;
 }
 
@@ -48,7 +69,7 @@ main {
 }
 
 .recipe-card-front h3 {
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .recipe-card-back {

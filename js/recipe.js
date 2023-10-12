@@ -11,7 +11,7 @@ function Recipe(name, items, imageUrl, method) {
 const recipeCards = [
   new Recipe(
     "Chicken Quesadillas",
-    ["Tortillas", "Chicken breast", "Cheddar cheese", "Salsa", "Sour cream"],
+    ["Tortillas", "Chicken breast", "Cheddar Cheese", "Salsa", "Sour cream"],
     "./images/Chicken-Quesadillas-7.jpg",
     "This is how you need to make this amazing bit of grub!  Chuck it all in the magic bowl mix it up, cook it in a hot thing and eat it!!!"
   ),
