@@ -1,63 +1,73 @@
 // Create Recipe Object
 // This will list 5 ingredients, the name and an image
 
-function Recipe(name, items, imageUrl) {
+function Recipe(name, items, imageUrl, method) {
   this.name = name;
   this.items = items;
   this.imageUrl = imageUrl;
+  this.method = method;
 }
 
 const recipeCards = [
   new Recipe(
     "Chicken Quesadillas",
-    ["tortillas", "chicken breast", "cheddar cheese", "salsa", "sour cream"],
-    "./images/Chicken-Quesadillas-7.jpg"
+    ["Tortillas", "Chicken breast", "Cheddar cheese", "Salsa", "Sour cream"],
+    "./images/Chicken-Quesadillas-7.jpg",
+    "This is how you need to make this amazing bit of grub!  Chuck it all in the magic bowl mix it up, cook it in a hot thing and eat it!!!"
   ),
   new Recipe(
     "Pesto Chicken",
     [
-      "pesto sauce",
-      "chicken breast",
-      "mozarella cheese",
-      "cherry tomatoes",
-      "spinach",
+      "Pesto Sauce",
+      "Chicken Breast",
+      "Mozarella Cheese",
+      "Cherry Tomatoes",
+      "Spinach",
     ],
-    "./images/chicken-pesto-recipe-9.jpg"
+    "./images/chicken-pesto-recipe-9.jpg",
+    "This is how you need to make this amazing bit of grub!  Chuck it all in the magic bowl mix it up, cook it in a hot thing and eat it!!!"
   ),
   new Recipe(
     "Pesto Pasta",
-    ["pasta", "pesto sauce", "cherry tomatoes", "parmesan cheese", "pine nuts"],
-    "./images/pesto-pasta-recipe.jpg"
+    ["Pasta", "Pesto Sauce", "Cherry Tomatoes", "Parmesan Cheese", "Pine Nuts"],
+    "./images/pesto-pasta-recipe.jpg",
+    "This is how you need to make this amazing bit of grub!  Chuck it all in the magic bowl mix it up, cook it in a hot thing and eat it!!!"
   ),
   new Recipe(
     "Spinach and Feta Stuffed Chicken",
-    ["spinach", "chicken breast", "feta cheese", "garlic", "olive oil"],
-    "./images/stuffed-feta-chicken.jpg"
+    ["Spinach", "Chicken Breast", "Feta Cheese", "Garlic", "Olive Oil"],
+    "./images/stuffed-feta-chicken.jpg",
+    "This is how you need to make this amazing bit of grub!  Chuck it all in the magic bowl mix it up, cook it in a hot thing and eat it!!!"
   ),
   new Recipe(
     "Black Bean Tacos",
-    ["tortillas", "black beans", "lettuce", "salsa", "avocado"],
-    "./images/crispy-black-bean-tacos_feat.jpg"
+    ["Tortillas", "Black Beans", "Lettuce", "Salsa", "Avocado"],
+    "./images/crispy-black-bean-tacos_feat.jpg",
+    "This is how you need to make this amazing bit of grub!  Chuck it all in the magic bowl mix it up, cook it in a hot thing and eat it!!!"
   ),
   new Recipe(
     "Teriyaki Salmon",
-    ["salmon fillets", "teriyaki sauce", "broccoli", "rice", "sesame seeds"],
-    "./images/teriyaki-salmon-1.jpg"
+    ["Salmon Fillets", "Teriyaki Sauce", "Broccoli", "Rice", "Sesame Seeds"],
+    "./images/teriyaki-salmon-1.jpg",
+    "This is how you need to make this amazing bit of grub!  Chuck it all in the magic bowl mix it up, cook it in a hot thing and eat it!!!"
   ),
   new Recipe(
     "Beef Stir Fry",
-    ["beef strips", "teriyaki sauce", "rice", "peppers", "broccoli"],
-    "./images/quick-beef-stir-fry.jpg"
+    ["Beef Strips", "Teriyaki Sauce", "Rice", "Peppers", "Broccoli"],
+    "./images/quick-beef-stir-fry.jpg",
+    "This is how you need to make this amazing bit of grub!  Chuck it all in the magic bowl mix it up, cook it in a hot thing and eat it!!!"
   ),
   new Recipe(
     "Mushroom and Spinach Quesadillas",
-    ["tortillas", "mushrooms", "spinach", "salsa", "cheddar cheese"],
-    "./images/Spinach-and-Mushroom-Quesadillas-stack.jpg"
+    ["Tortillas", "Mushrooms", "Spinach", "Salsa", "Cheddar Cheese"],
+    "./images/Spinach-and-Mushroom-Quesadillas-stack.jpg",
+    "This is how you need to make this amazing bit of grub!  Chuck it all in the magic bowl mix it up, cook it in a hot thing and eat it!!!"
   ),
   new Recipe(
     "Bacon Cheeseburger",
-    ["burgers", "lettuce", "cheddar cheese", "bacon", "red onion"],
-    "./images/Bacon Cheeseburger.jpg"
+    ["Burgers", "Lettuce", "Cheddar Cheese", "Bacon", "Red Onion"],
+    "./images/Bacon Cheeseburger.jpg",
+    "This is how you need to make this amazing bit of grub!  Chuck it all in the magic bowl mix it up, cook it in a hot thing and eat it!!!"
   ),
 ];
 
@@ -102,7 +112,11 @@ function populateRecipeCards() {
       ingredientsList.appendChild(listItem);
     });
 
+    const methodParagraph = document.createElement("p");
+    methodParagraph.textContent = recipe.method;
+
     recipeCardBack.appendChild(ingredientsList);
+    recipeCardBack.appendChild(methodParagraph);
 
     recipeCardInner.appendChild(recipeCardFront);
     recipeCardInner.appendChild(recipeCardBack);
