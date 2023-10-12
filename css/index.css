@@ -17,29 +17,57 @@ article {
 
 p {
   padding: 10px;
+  line-height: normal;
 }
+
+article ul {
+  list-style-type: disc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: normal;
+}
+
 section {
   grid-row-start: 2;
   grid-row-end: 3;
   grid-column-start: 2;
   grid-column-end: 3;
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e09f3e;
+  border-radius: 10px;
+  margin-left: 10px;
+  width: fit-content;
+}
+
+#yourPantry {
+  height: 220px;
+  width: 220px;
+  padding: 25px;
+  overflow-y: scroll;
+  font-family: "Caveat", cursive;
+  font-size: 1.5rem;
+  background-color: #e09f3e;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #e09f3e;
+  border-radius: 10px;
 }
 
 h2 {
   font-weight: bold;
   font-size: 1.5rem;
-}
-
-#yourPantry {
-  font-family: "Caveat", cursive;
-  padding: 10px;
-  overflow-y: scroll;
-}
-
-#yourPantry li {
-  font-size: 1.5rem;
-  list-style-image: url("./check.png");
 }
 
 div:first-child {
@@ -48,6 +76,7 @@ div:first-child {
   grid-column-start: 1;
   grid-column-end: 2;
 }
+
 div:last-child {
   grid-row-start: 2;
   grid-row-end: 3;
@@ -68,6 +97,28 @@ legend {
 label {
   padding: 10px;
 }
-#formButton {
+
+#ingredientName,
+#removedIngredient,
+#recipeIngredients {
+  background-color: #fff3b0;
+  font-family: "Quicksand", sans-serif;
+  border-radius: 5px;
+  padding: 2px;
+}
+#formButton,
+#removeButton,
+#recipeButton {
+  border-radius: 10px;
+  background-color: #335c67;
+  color: white;
+  font-family: "Quicksand", sans-serif;
   cursor: pointer;
+}
+
+#formButton:hover,
+#removeButton:hover,
+#recipeButton:hover {
+  background-color: #fff3b0;
+  color: #335c67;
 }
